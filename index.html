@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portofolio Retro Junior Web Developer - Siswa Kelas 6 SD yang bersemangat dalam dunia coding dan web development.">
+  <title>Al Fatih | Siswa Kelas 6 SD</title>
+
+  <!-- Google Fonts: Space Mono & Press Start 2P -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- Devicon CDN for Technology Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- AOS (Animate On Scroll) Library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Custom Retro Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Terapkan tema tersimpan sebelum halaman tampil (mencegah kedipan) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('retro-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#retroNav" data-bs-offset="100">
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav id="retroNav" class="navbar navbar-expand-lg sticky-top retro-navbar py-3">
+      <div class="container">
+        <a class="navbar-brand pixel-text fs-6 d-flex align-items-center gap-2" href="#hero">
+          <span class="fs-4">👾</span>
+          <span>DEV.KID_</span>
+        </a>
+
+        <button class="navbar-toggler retro-btn retro-btn-yellow p-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fw-bold">MENU ☰</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link retro-nav-link" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link retro-nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link retro-nav-link" href="#projects">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link retro-nav-link" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <button id="easterEggBtn" class="retro-btn retro-btn-pink py-1 px-3 fs-6" title="Klik untuk bonus!">
+                ★ BONUS BUTTON
+              </button>
+            </li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <button id="themeToggleBtn" type="button" class="retro-btn theme-toggle py-1 px-3 fs-6"
+                aria-pressed="false" title="Ganti ke Night Mode">
+                <span class="theme-toggle-icon">🌙</span>
+                <span class="theme-toggle-label">DARK</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="py-5 my-md-4 overflow-hidden">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7 text-center text-lg-start">
+            <span class="retro-badge badge-green mb-3" data-aos="fade-down" data-aos-duration="600">
+              ● <span id="typewriterText">AL FATIH - SIAP CODING &AMP; BELAJAR</span><span
+                class="typewriter-cursor">|</span>
+            </span>
+            <h1 class="retro-title mb-3" data-aos="fade-right" data-aos-duration="800">
+              HALO! AKU AL FATIH.
+            </h1>
+            <p class="fs-5 mb-4 fw-medium" data-aos="fade-right" data-aos-duration="1000">
+              Siswa kelas 6 SD yang sedang mempelajari HTML, CSS, python, dan JavaScript. Serta membuat beberapa web
+              dengan vibe coding! 🤖
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start" data-aos="fade-up"
+              data-aos-duration="1200">
+              <a href="#projects" class="retro-btn retro-btn-yellow">
+                🚀 See Project
+              </a>
+              <a href="#contact" class="retro-btn retro-btn-blue">
+                ✉️ Contact Me
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center">
+            <div class="hero-avatar-wrapper" data-aos="zoom-in-up" data-aos-duration="900">
+              <img src="image/Profil.png" alt="Foto Profil Developer" class="hero-avatar img-fluid">
+              <span class="hero-floating-tag" data-aos="flip-up" data-aos-duration="1300">Young Student ✨</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="py-5 overflow-hidden">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="600">
+          <span class="retro-badge badge-pink mb-2">PROFIL SAYA</span>
+          <h2 class="retro-title">TENTANG SAYA</h2>
+          <p class="text-muted">Kisah awal mula menyukai dunia teknologi dan pemrograman</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Bio Window -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-duration="700">
+            <div class="retro-box h-100">
+              <div class="window-bar" style="background-color: var(--retro-pink); color: #fff;">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="pixel-text fs-6">bio.txt</div>
+              </div>
+              <div class="p-4">
+                <h3 class="fs-5 fw-bold mb-3">Hi, salam kenal semuanya! 👋</h3>
+                <p>
+                  <strong>Assalamu'alaikum</strong>, hi! Saya Al Fatih seorang siswa <strong>kelas 6, SD 2 Kabupaten
+                    Bulukumba</strong>
+                  yang tertarik dalam dunia komputer,
+                  teknologi, koding, dan artificial intelligence (AI). Di
+                  samping belajar pelajaran sekolah dan menghafal Quran, saya juga menghabiskan waktu luang saya dengan
+                  meningkatkan skill
+                  koding ku.
+                </p>
+                <p>
+                  Bagi saya, membuat website, dan developing software itu sesuatu yang keren, bisa mewujudkan ide, dan
+                  memecahkan masalah logika
+                  pemrograman.
+                </p>
+                <div class="d-flex flex-wrap gap-2 pt-2">
+                  <span class="retro-badge badge-yellow">🤖 AI & Coding</span>
+                  <span class="retro-badge badge-green">📚 Siswa Berprestasi</span>
+                  <span class="retro-badge badge-blue">💡 AI Explorer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Window -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1100">
+            <div class="retro-box h-100">
+              <div class="window-bar" style="background-color: var(--retro-blue); color: #000;">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="pixel-text fs-6">skills_inventory.cfg</div>
+              </div>
+              <div class="p-4">
+                <h3 class="fs-5 fw-bold mb-3">Teknologi & Bahasa yang Dipelajari:</h3>
+
+                <div class="row g-3">
+                  <!-- HTML5 -->
+                  <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="500">
+                    <div class="tech-card">
+                      <i class="devicon-html5-plain colored tech-icon"></i>
+                      <div class="fw-bold fs-6">HTML5</div>
+                      <small class="text-muted d-block" style="font-size: 0.75rem;">Struktur Web</small>
+                    </div>
+                  </div>
+
+                  <!-- CSS3 -->
+                  <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="750">
+                    <div class="tech-card">
+                      <i class="devicon-css3-plain colored tech-icon"></i>
+                      <div class="fw-bold fs-6">CSS3</div>
+                      <small class="text-muted d-block" style="font-size: 0.75rem;">Desain & Gaya</small>
+                    </div>
+                  </div>
+
+                  <!-- JavaScript -->
+                  <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="tech-card">
+                      <i class="devicon-javascript-plain colored tech-icon"></i>
+                      <div class="fw-bold fs-6">JavaScript</div>
+                      <small class="text-muted d-block" style="font-size: 0.75rem;">Interaktivitas</small>
+                    </div>
+                  </div>
+
+                  <!-- Python -->
+                  <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="600">
+                    <div class="tech-card">
+                      <i class="devicon-python-plain colored tech-icon"></i>
+                      <div class="fw-bold fs-6">Python</div>
+                      <small class="text-muted d-block" style="font-size: 0.75rem;">Data</small>
+                    </div>
+                  </div>
+
+                  <!-- Git -->
+                  <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="850">
+                    <div class="tech-card">
+                      <i class="devicon-git-plain colored tech-icon"></i>
+                      <div class="fw-bold fs-6">Git</div>
+                      <small class="text-muted d-block" style="font-size: 0.75rem;">Version Control</small>
+                    </div>
+                  </div>
+
+                  <!-- GitHub -->
+                  <div class="col-6 col-sm-4" data-aos="zoom-in" data-aos-duration="1200">
+                    <div class="tech-card">
+                      <i class="devicon-github-original colored tech-icon"></i>
+                      <div class="fw-bold fs-6">GitHub</div>
+                      <small class="text-muted d-block" style="font-size: 0.75rem;">Kode Repositori</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SECTION ================= -->
+    <section id="projects" class="py-5 bg-white border-top border-bottom border-3 border-dark overflow-hidden">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="600">
+          <span class="retro-badge badge-yellow mb-2">SHOWCASE</span>
+          <h2 class="retro-title">KARYA & PROJECT</h2>
+          <p class="text-muted">Koleksi beberapa project website buatan saya</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Project 1: WaktuSholat -->
+          <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-duration="700">
+            <div class="retro-box h-100 d-flex flex-column">
+              <div class="window-bar" style="background-color: var(--retro-green);">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="pixel-text" style="font-size: 0.65rem;">sholat.app</span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="fs-1 mb-2">🕌</span>
+                <h3 class="fs-5 fw-bold mb-2">Waktu Sholat</h3>
+                <p class="flex-grow-1 text-secondary">
+                  Aplikasi jadwal waktu sholat otomatis dan akurat untuk membantu mengingatkan waktu ibadah setiap hari.
+                </p>
+                <div class="mb-3 d-flex flex-wrap gap-1">
+                  <span class="retro-badge badge-green">Web App</span>
+                  <span class="retro-badge badge-yellow">API</span>
+                  <span class="retro-badge badge-blue">JavaScript</span>
+                </div>
+                <a href="https://web-waktu-sholat.netlify.app" target="_blank" rel="noopener noreferrer"
+                  class="retro-btn retro-btn-green text-center justify-content-center">
+                  Lihat Demo 🔗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: HematListrik -->
+          <div class="col-md-6 col-lg-4" data-aos="flip-up" data-aos-duration="1000">
+            <div class="retro-box h-100 d-flex flex-column">
+              <div class="window-bar" style="background-color: var(--retro-yellow);">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="pixel-text" style="font-size: 0.65rem;">hemat_listrik.app</span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="fs-1 mb-2">⚡</span>
+                <h3 class="fs-5 fw-bold mb-2">Hemat Listrik</h3>
+                <p class="flex-grow-1 text-secondary">
+                  Website edukasi dan kalkulator praktis untuk memantau serta menghemat penggunaan daya listrik di
+                  rumah.
+                </p>
+                <div class="mb-3 d-flex flex-wrap gap-1">
+                  <span class="retro-badge badge-yellow">Kalkulator</span>
+                  <span class="retro-badge badge-pink">CSS</span>
+                  <span class="retro-badge badge-green">Logic</span>
+                </div>
+                <a href="https://hemat-listrik.netlify.app" target="_blank" rel="noopener noreferrer"
+                  class="retro-btn retro-btn-yellow text-center justify-content-center">
+                  Lihat Demo 🔗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Air Drawing Board -->
+          <div class="col-md-6 col-lg-4" data-aos="flip-right" data-aos-duration="1300">
+            <div class="retro-box h-100 d-flex flex-column">
+              <div class="window-bar" style="background-color: var(--retro-blue); color: #000;">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <span class="pixel-text" style="font-size: 0.65rem;">air_drawing.app</span>
+              </div>
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <span class="fs-1 mb-2">🎨</span>
+                <h3 class="fs-5 fw-bold mb-2">Air Drawing Board</h3>
+                <p class="flex-grow-1 text-secondary">
+                  Papan gambar interaktif berbasis web yang seru dan kreatif untuk menggambar langsung di layar.
+                </p>
+                <div class="mb-3 d-flex flex-wrap gap-1">
+                  <span class="retro-badge badge-blue">Canvas</span>
+                  <span class="retro-badge badge-purple">AI / Vision</span>
+                  <span class="retro-badge badge-yellow">Creative</span>
+                </div>
+                <a href="https://air-drawing-boardd.netlify.app" target="_blank" rel="noopener noreferrer"
+                  class="retro-btn retro-btn-blue text-center justify-content-center">
+                  Lihat Demo 🔗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="py-5 overflow-hidden">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="600">
+          <span class="retro-badge badge-green mb-2">HUBUNGI SAYA</span>
+          <h2 class="retro-title">CONTACT ME</h2>
+          <p class="text-muted">Yuk terhubung! Kamu bisa klik media sosial di bawah atau langsung chat saya lewat
+            WhatsApp.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="zoom-in-up" data-aos-duration="950">
+            <div class="retro-box text-center">
+              <div class="window-bar" style="background-color: var(--retro-dark); color: #fff;">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <div class="pixel-text fs-6">connect_with_me.exe</div>
+              </div>
+
+              <div class="p-4 p-md-5">
+                <p class="fw-bold mb-4 fs-5" data-aos="fade-down" data-aos-duration="700">
+                  Temukan & Terhubung dengan Saya:
+                </p>
+
+                <!-- Barisan Icon / Logo Sosial Media yang Bisa Diklik -->
+                <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mb-5" data-aos="zoom-in"
+                  data-aos-duration="850">
+                  <!-- GitHub -->
+                  <a href="https://github.com/afth-2014" target="_blank" rel="noopener noreferrer"
+                    class="contact-social-btn btn-github" title="Kunjungi GitHub" aria-label="GitHub">
+                    <i class="bi bi-github fs-2"></i>
+                  </a>
+
+                  <!-- Instagram -->
+                  <a href="https://instagram.com/afth_0009" target="_blank" rel="noopener noreferrer"
+                    class="contact-social-btn btn-instagram" title="Kunjungi Instagram" aria-label="Instagram">
+                    <i class="bi bi-instagram fs-2"></i>
+                  </a>
+
+                  <!-- Gmail -->
+                  <a href="mailto:alvatih2014@gmail.com" class="contact-social-btn btn-gmail"
+                    title="Kirim Email ke alvatih2014@gmail.com" aria-label="Gmail">
+                    <i class="bi bi-envelope-fill fs-2"></i>
+                  </a>
+
+                  <!-- WhatsApp Icon Link -->
+                  <a href="https://wa.link/f9bnbf" target="_blank" rel="noopener noreferrer"
+                    class="contact-social-btn btn-whatsapp" title="Hubungi via WhatsApp" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp fs-2"></i>
+                  </a>
+                </div>
+
+                <!-- Tombol Besar Chat Me -->
+                <div data-aos="flip-up" data-aos-duration="1000" class="mb-4">
+                  <a href="https://wa.link/f9bnbf" target="_blank" rel="noopener noreferrer" class="retro-chat-btn">
+                    <i class="bi bi-whatsapp fs-3"></i>
+                    <span>Chat Me</span>
+                  </a>
+                </div>
+
+                <div class="pt-2">
+                  <span class="pixel-text text-muted" style="font-size: 0.75rem;">STATUS: ONLINE & SIAP NGOBROL
+                    🟢</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="retro-footer py-4">
+    <div class="container text-center">
+      <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+        <span class="pixel-text fs-6">👾 DEV.KID_</span>
+        <span>•</span>
+        <span class="fw-bold">AL FATIH - SISWA KELAS 6 SD</span>
+      </div>
+      <p class="text-secondary small mb-2">
+        Dibuat dengan HTML5, CSS, JavasScript, dan Bootstrap 5.
+      </p>
+      <p class="pixel-text text-muted mb-0" style="font-size: 0.65rem;">
+        ©
+        <script>document.write(new Date().getFullYear());</script> SEMUA HAK CIPTA DILINDUNGI
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP BUTTON ================= -->
+  <button id="backToTopBtn" class="retro-back-to-top" title="Kembali ke atas" aria-label="Back to Top">
+    ▲ TOP
+  </button>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS (Animate On Scroll) Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+
+  <!-- Dark Mode Toggle (Arcade Night) -->
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.getElementById('themeToggleBtn');
+      if (!btn) return;
+
+      const icon = btn.querySelector('.theme-toggle-icon');
+      const label = btn.querySelector('.theme-toggle-label');
+
+      function syncButton() {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        icon.textContent = isDark ? '☀️' : '🌙';
+        label.textContent = isDark ? 'LIGHT' : 'DARK';
+        btn.setAttribute('aria-pressed', String(isDark));
+        btn.title = isDark ? 'Ganti ke Light Mode' : 'Ganti ke Dark Mode';
+      }
+
+      btn.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('retro-theme', next); } catch (e) { }
+        syncButton();
+
+        // Animasi ikon berputar ala pixel
+        btn.classList.remove('is-switching');
+        void btn.offsetWidth;
+        btn.classList.add('is-switching');
+      });
+
+      syncButton();
+    })();
+  </script>
+</body>
+
+</html>

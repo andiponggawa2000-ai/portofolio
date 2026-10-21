@@ -1,0 +1,492 @@
+:root {
+  --retro-bg: #fffbf0;
+  --retro-card-bg: #ffffff;
+  --retro-yellow: #ffdf40;
+  --retro-pink: #ff6b97;
+  --retro-blue: #4dc9e6;
+  --retro-green: #38e48b;
+  --retro-purple: #9d65ff;
+  --retro-dark: #121212;
+  --retro-border: #121212;
+  --retro-shadow: 5px 5px 0px #121212;
+  --retro-shadow-hover: 2px 2px 0px #121212;
+  --retro-shadow-lg: 8px 8px 0px #121212;
+  --retro-font-mono: 'Space Mono', 'Courier New', monospace;
+  --retro-font-display: 'Press Start 2P', cursive, monospace;
+
+  /* Theme tokens (di-override oleh dark mode) */
+  --retro-text: #121212;
+  --retro-muted: #6c757d;
+  --retro-surface: #ffffff;
+  --retro-dot: #121212;
+  --retro-title-shadow: var(--retro-yellow);
+  --retro-navbar-bg: var(--retro-yellow);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--retro-bg);
+  color: var(--retro-text);
+  font-family: var(--retro-font-mono);
+  overflow-x: hidden;
+  background-image: radial-gradient(var(--retro-dot) 1px, transparent 0);
+  background-size: 24px 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Typography & Titles */
+.pixel-text {
+  font-family: var(--retro-font-display);
+}
+
+.retro-title {
+  font-family: var(--retro-font-display);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  text-shadow: 3px 3px 0px var(--retro-title-shadow);
+  letter-spacing: -1px;
+}
+
+.retro-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Retro Components & Utilities */
+.retro-border {
+  border: 3px solid var(--retro-border);
+  box-shadow: var(--retro-shadow);
+  transition: all 0.15s ease-in-out;
+}
+
+.retro-border:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--retro-shadow-lg);
+}
+
+.retro-box {
+  background-color: var(--retro-card-bg);
+  border: 3px solid var(--retro-border);
+  box-shadow: var(--retro-shadow);
+  border-radius: 10px;
+}
+
+.retro-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: 2px solid var(--retro-border);
+  box-shadow: 2px 2px 0 var(--retro-border);
+  border-radius: 6px;
+}
+
+.badge-yellow { background-color: var(--retro-yellow); color: #000; }
+.badge-pink { background-color: var(--retro-pink); color: #fff; }
+.badge-blue { background-color: var(--retro-blue); color: #000; }
+.badge-green { background-color: var(--retro-green); color: #000; }
+.badge-purple { background-color: var(--retro-purple); color: #fff; }
+
+/* Buttons */
+.retro-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--retro-font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 3px solid var(--retro-border);
+  border-radius: 8px;
+  box-shadow: var(--retro-shadow);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  user-select: none;
+}
+
+.retro-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: var(--retro-shadow-hover);
+  color: inherit;
+}
+
+.retro-btn:active {
+  transform: translate(5px, 5px);
+  box-shadow: none;
+}
+
+.retro-btn-yellow { background-color: var(--retro-yellow); color: #000; }
+.retro-btn-pink { background-color: var(--retro-pink); color: #fff; }
+.retro-btn-blue { background-color: var(--retro-blue); color: #000; }
+.retro-btn-green { background-color: var(--retro-green); color: #000; }
+.retro-btn-dark { background-color: var(--retro-dark); color: #fff; }
+
+/* Navbar */
+.retro-navbar {
+  background-color: var(--retro-navbar-bg);
+  transition: background-color 0.3s ease;
+  border-bottom: 3px solid var(--retro-border);
+  box-shadow: 0 4px 0 var(--retro-border);
+  z-index: 1000;
+}
+
+.retro-nav-link {
+  font-weight: 700;
+  color: var(--retro-text) !important;
+  border: 2px solid transparent;
+  padding: 6px 14px !important;
+  margin: 0 4px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.retro-nav-link:hover,
+.retro-nav-link.active {
+  background-color: var(--retro-surface);
+  border-color: var(--retro-border);
+  box-shadow: 3px 3px 0 var(--retro-border);
+  transform: translate(-2px, -2px);
+}
+
+/* Hero Section */
+.hero-avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-avatar {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 4px solid var(--retro-border);
+  border-radius: 20px;
+  box-shadow: var(--retro-shadow-lg);
+  background-color: var(--retro-blue);
+}
+
+.hero-floating-tag {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background: var(--retro-green);
+  font-family: var(--retro-font-display);
+  font-size: 0.65rem;
+  padding: 6px 10px;
+  border: 2px solid var(--retro-border);
+  box-shadow: 3px 3px 0 var(--retro-border);
+  border-radius: 6px;
+}
+
+/* Window Bar / Card Header Style */
+.window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  border-bottom: 3px solid var(--retro-border);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--retro-border);
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+/* Form Elements */
+.retro-input {
+  border: 3px solid var(--retro-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: var(--retro-font-mono);
+  box-shadow: 3px 3px 0 var(--retro-border);
+  outline: none;
+  width: 100%;
+  background-color: var(--retro-surface);
+  color: var(--retro-text);
+}
+
+.retro-input:focus {
+  border-color: var(--retro-purple);
+  box-shadow: 4px 4px 0 var(--retro-purple);
+}
+
+/* Footer */
+.retro-footer {
+  border-top: 4px solid var(--retro-border);
+  background: var(--retro-surface);
+}
+
+/* Tech Skills Logo Grid */
+.tech-card {
+  background: var(--retro-surface);
+  border: 3px solid var(--retro-border);
+  box-shadow: 4px 4px 0 var(--retro-border);
+  border-radius: 10px;
+  padding: 16px 12px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.tech-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 var(--retro-border);
+  background-color: var(--retro-yellow);
+}
+
+.tech-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+  display: inline-block;
+  font-weight: 700;
+  animation: blinkCursor 0.8s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Floating Retro Back to Top Button */
+.retro-back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  font-family: var(--retro-font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  background-color: var(--retro-yellow);
+  color: #121212;
+  border: 3px solid var(--retro-border);
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 var(--retro-border);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.25s ease-in-out;
+}
+
+.retro-back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.retro-back-to-top:hover {
+  background-color: var(--retro-green);
+  box-shadow: 2px 2px 0 var(--retro-border);
+  transform: translate(2px, 2px);
+}
+
+.retro-back-to-top:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+/* ==========================================================================
+   THEME TOGGLE BUTTON (Night / Day)
+   ========================================================================== */
+.theme-toggle,
+.theme-toggle:hover {
+  background-color: var(--retro-purple);
+  color: #fff;
+}
+
+.theme-toggle-icon {
+  display: inline-block;
+}
+
+.theme-toggle.is-switching .theme-toggle-icon {
+  animation: themeIconSpin 0.5s steps(6);
+}
+
+@keyframes themeIconSpin {
+  from { transform: rotate(0deg) scale(0.6); }
+  to { transform: rotate(360deg) scale(1); }
+}
+
+/* ==========================================================================
+   DARK MODE — "ARCADE NIGHT"
+   Neo-brutalism terbalik: garis & bayangan krem di atas ungu gelap,
+   ditambah efek scanline layar CRT.
+   ========================================================================== */
+[data-theme="dark"] {
+  --retro-bg: #1b1530;
+  --retro-card-bg: #261e40;
+  --retro-surface: #2f2650;
+  --retro-text: #fdf6e3;
+  --retro-muted: #b9aed6;
+  --retro-border: #fdf6e3;
+  --retro-dot: rgba(253, 246, 227, 0.14);
+  --retro-title-shadow: var(--retro-pink);
+  --retro-navbar-bg: #261e40;
+  --retro-shadow: 5px 5px 0px #fdf6e3;
+  --retro-shadow-hover: 2px 2px 0px #fdf6e3;
+  --retro-shadow-lg: 8px 8px 0px #fdf6e3;
+  color-scheme: dark;
+}
+
+/* Efek scanline CRT */
+[data-theme="dark"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.18) 3px
+  );
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .navbar-brand:hover {
+  color: var(--retro-yellow);
+}
+
+/* Override utilitas Bootstrap yang warnanya hardcoded */
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] .text-secondary {
+  color: var(--retro-muted) !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--retro-card-bg) !important;
+}
+
+[data-theme="dark"] .border-dark {
+  border-color: var(--retro-border) !important;
+}
+
+/* Elemen berlatar terang tetap memakai teks gelap agar terbaca */
+[data-theme="dark"] .window-bar,
+[data-theme="dark"] .hero-floating-tag,
+[data-theme="dark"] .retro-btn:hover,
+[data-theme="dark"] .tech-card:hover,
+[data-theme="dark"] .tech-card:hover .text-muted {
+  color: #121212 !important;
+}
+
+/* window-bar dengan warna teks inline (pink/biru/ungu/gelap) tetap dihormati */
+[data-theme="dark"] .window-bar[style*="color: #fff"] {
+  color: #fff !important;
+}
+
+[data-theme="dark"] .retro-input::placeholder {
+  color: var(--retro-muted);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background-color: var(--retro-yellow);
+  color: #121212;
+}
+
+/* ==========================================================================
+   CONTACT SOCIAL BUTTONS & CHAT ME
+   ========================================================================== */
+.contact-social-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background-color: var(--retro-surface);
+  border: 3px solid var(--retro-border);
+  box-shadow: var(--retro-shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+  color: var(--retro-text);
+}
+
+.contact-social-btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--retro-shadow-lg);
+  color: inherit;
+}
+
+.contact-social-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--retro-shadow-hover);
+}
+
+.contact-social-btn.btn-github:hover {
+  background-color: #24292e;
+  color: #ffffff !important;
+}
+
+.contact-social-btn.btn-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  color: #ffffff !important;
+}
+
+.contact-social-btn.btn-gmail:hover {
+  background-color: #ea4335;
+  color: #ffffff !important;
+}
+
+.contact-social-btn.btn-whatsapp:hover {
+  background-color: #25d366;
+  color: #ffffff !important;
+}
+
+/* Big Chat Me Button */
+.retro-chat-btn {
+  font-family: var(--retro-font-mono);
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 16px 36px;
+  border: 3px solid var(--retro-border);
+  border-radius: 12px;
+  background-color: #25d366;
+  color: #000000 !important;
+  box-shadow: var(--retro-shadow-lg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.retro-chat-btn:hover {
+  transform: translate(-3px, -3px) scale(1.02);
+  box-shadow: 10px 10px 0px var(--retro-border);
+  background-color: #22bf5b;
+  color: #000000 !important;
+}
+
+.retro-chat-btn:active {
+  transform: translate(3px, 3px) scale(0.99);
+  box-shadow: var(--retro-shadow-hover);
+}
+
+
+
